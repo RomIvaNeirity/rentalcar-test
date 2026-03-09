@@ -1,0 +1,65 @@
+.hero {
+  min-height: 700px;
+  background-image: url(../../public/Picture.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 60px 24px;
+  text-align: center;
+}
+
+.heroTitle {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 120%;
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.heroSubTitle {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 40px;
+}
+
+.heroButton {
+  border-radius: 12px;
+  padding: 12px 99px;
+  width: 276px;
+  height: 44px;
+  background: var(--button);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--white);
+}
+
+.heroButton:hover {
+  background: var(--button-hover);
+  box-shadow: 0 0px 8px var(--button-hover);
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    padding: 436px 280px 60px;
+  }
+  .heroTitle {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero {
+    padding: 436px 328px 60px;
+  }
+
+  .heroTitle {
+    font-size: 60px;
+  }
+}

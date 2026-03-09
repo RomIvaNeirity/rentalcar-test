@@ -1,0 +1,18 @@
+.header {
+  border-bottom: 1px solid var(--badges);
+  background: var(--badges);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 24px 120px;
+}
+
+.navigation {
+  display: flex;
+  gap: 32px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  text-align: center;
+}
