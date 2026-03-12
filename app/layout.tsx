@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header/Header";
 
 const manrope = Manrope({
   subsets: ["latin", "cyrillic"],
@@ -27,7 +28,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${manrope.variable} ${inter.variable}`}>
-        {children}
+        <Header />
+        <main>{children}</main>
       </body>
     </html>
   );

@@ -39,6 +39,18 @@ ul {
   padding: 0;
 }
 
+input {
+  display: block;
+  padding: 0;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 30px;
+}
+
 /* Styles for Mobile devices */
 .container {
   max-width: 375px;

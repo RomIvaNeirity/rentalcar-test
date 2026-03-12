@@ -1,0 +1,73 @@
+.filtersWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 84px 258px;
+}
+
+.filtersForm {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 16px;
+}
+
+.labelsFilters {
+  width: 204px;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 133%;
+  color: var(--gray);
+}
+
+.labelsFilterSelects {
+  position: relative;
+  display: inline-block;
+
+  border-radius: 12px;
+  padding: 12px 16px;
+  width: 204px;
+  height: 44px;
+  /* background: var(--inputs); */
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--main);
+  border: none;
+}
+
+.labelsFilterSelects select {
+  appearance: none;
+  padding-right: 30px;
+}
+
+.labelsFilterSelects:after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  transform: translateY(-50%);
+  background-image: url("/icons.svg#icon-Logo");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.labelFilterMileage {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+.filterInputsWrapper {
+  display: flex;
+}
+
+.filterInputs {
+  width: 160px;
+}
