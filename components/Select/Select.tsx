@@ -8,11 +8,6 @@ type BrandOption = {
   label: string;
 };
 
-type PriceOption = {
-  value: number;
-  label: string;
-};
-
 type BrandSelectProps = {
   brands: string[];
   brand: string;
@@ -21,7 +16,7 @@ type BrandSelectProps = {
 
 type PriceSelectProps = {
   price: string;
-  setPrice: (value: number | "") => void;
+  setPrice: React.Dispatch<React.SetStateAction<string>>;
 };
 
 export function BrandSelect({ brands, brand, setBrand }: BrandSelectProps) {
@@ -45,7 +40,7 @@ export function BrandSelect({ brands, brand, setBrand }: BrandSelectProps) {
       classNames={{
         control: () => css.selectControl,
         menu: () => css.selectMenu,
-        menuList: () => css.selectMenuList,
+        menuList: () => css.brandMenuList,
         option: () => css.selectOption,
         placeholder: () => css.selectPlaceholder,
       }}
@@ -58,21 +53,17 @@ export function PriceSelect({ price, setPrice }: PriceSelectProps) {
     const value = (i + 1) * 10;
 
     return {
-      value: value,
+      value: value.toString(),
       label: `${value}`,
     };
   });
-
-  const handleChange = (option: SingleValue<PriceOption>) => {
-    setPrice(option?.value || "");
-  };
 
   return (
     <Select
       instanceId="price-select"
       options={options}
-      value={options.find((o) => o.value === Number(price)) || null}
-      onChange={handleChange}
+      value={options.find((o) => o.value === price) || null}
+      onChange={(option) => setPrice(option?.value || "")}
       placeholder="Choose a price"
       unstyled
       classNames={{
@@ -80,7 +71,7 @@ export function PriceSelect({ price, setPrice }: PriceSelectProps) {
         menu: () => css.selectMenu,
         option: () => css.selectOption,
         placeholder: () => css.selectPlaceholder,
-        menuList: () => css.selectMenuList,
+        menuList: () => css.priceMenuList,
         dropdownIndicator: () => css.selectIndicator,
       }}
       formatOptionLabel={(option, { context }) => {

@@ -8,12 +8,17 @@
   color: var(--main);
 }
 
+.selectControl input {
+  caret-color: transparent; /* ховає курсор */
+}
+
 .selectControl[data-menu-open="true"] .selectIndicator {
   transform: rotate(90deg);
   transition: transform 0.3s ease;
 }
 
-.selectMenu {
+.brandMenuList,
+.priceMenuList {
   border: 1px solid var(--inputs);
   border-radius: 12px;
   width: 204px;
@@ -28,6 +33,14 @@
   color: var(--gray);
   margin-bottom: 8px;
   overflow: hidden;
+}
+
+.brandMenuList {
+  height: 272px;
+}
+
+.priceMenuList {
+  height: 188px;
 }
 
 /* прибираємо стрілочки вгорі/внизу */
