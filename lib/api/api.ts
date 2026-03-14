@@ -23,11 +23,13 @@ export const getCars = async (page: number, filters: CarFilters = {}) => {
   }
 
   if (filters.minMileage) {
-    params.append("minMileage", filters.minMileage);
+    const cleanMinMileage = filters.minMileage.replace(/,/g, "");
+    params.append("minMileage", cleanMinMileage);
   }
 
   if (filters.maxMileage) {
-    params.append("maxMileage", filters.maxMileage);
+    const cleanMaxMileage = filters.maxMileage.replace(/,/g, "");
+    params.append("maxMileage", cleanMaxMileage);
   }
 
   const res = await axios.get<CarListResponse>(`/cars?${params}`);

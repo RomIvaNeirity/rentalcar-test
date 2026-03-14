@@ -33,6 +33,18 @@
 
 .itemModel {
   color: var(--button);
+  white-space: nowrap; /* не переносити рядок */
+  overflow: hidden; /* обрізати зайве */
+  text-overflow: ellipsis;
+}
+
+.itemCardTitle {
+  white-space: nowrap; /* не переносити рядок */
+  overflow: hidden; /* обрізати зайве */
+  text-overflow: ellipsis;
+}
+.itemCardPrice {
+  white-space: nowrap;
 }
 
 .carDetailsContainer {
@@ -67,4 +79,9 @@
   font-size: 16px;
   line-height: 125%;
   color: var(--white);
+}
+
+.carCardButton:hover {
+  background: var(--button-hover);
+  cursor: pointer;
 }

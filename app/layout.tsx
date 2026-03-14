@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope, Inter } from "next/font/google";
+import "izitoast/dist/css/iziToast.min.css";
+import "flatpickr/dist/flatpickr.css";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 

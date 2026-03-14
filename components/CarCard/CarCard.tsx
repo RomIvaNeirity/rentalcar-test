@@ -35,14 +35,20 @@ export default function CarCard({ item }: Props) {
           />
         </svg>
 
-        <Image src={item.img} width={400} height={268} alt={item.model} />
+        <Image
+          src={item.img}
+          width={400}
+          height={268}
+          alt={item.model}
+          priority
+        />
       </div>
       <div className={css.cardFHeader}>
-        <span>
+        <span className={css.itemCardTitle}>
           {item.brand}
           <span className={css.itemModel}> {item.model}</span>, {item.year}
         </span>
-        <span>$ {item.rentalPrice}</span>
+        <span className={css.itemCardPrice}>$ {item.rentalPrice}</span>
       </div>
       <div className={css.carDetailsContainer}>
         <span className={css.carDetails}>

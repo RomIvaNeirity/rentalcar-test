@@ -4,6 +4,7 @@ import Filters from "@/components/Filters/Filters";
 import CarList from "@/components/CarList/CarList";
 import { getCars, getBrands } from "@/lib/api/api";
 import { useState, useEffect } from "react";
+import css from "./page.module.css";
 
 import { useCarsStore } from "@/lib/store/useCarsStore";
 
@@ -45,7 +46,14 @@ export default function Catalog() {
       <Filters brands={brands} />
       <CarList cars={cars} />
       {!loading && cars.length > 0 && cars.length < totalCars && (
-        <button onClick={() => setPage(page + 1)}>Load more</button>
+        <div className={css.loadMoreButtonContainer}>
+          <button
+            className={css.loadMoreButton}
+            onClick={() => setPage(page + 1)}
+          >
+            Load more
+          </button>
+        </div>
       )}
     </>
   );

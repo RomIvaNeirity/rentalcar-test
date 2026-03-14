@@ -1,0 +1,46 @@
+.bookingFormLabel {
+  width: 100%;
+}
+
+.bookingFormInput {
+  border-radius: 12px;
+  padding: 12px 20px;
+  width: 576px;
+  height: 48px;
+  background: var(--inputs);
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--gray);
+  margin-bottom: 16px;
+}
+
+.bookingFormTextarea {
+  border-radius: 12px;
+  padding: 12px 20px;
+  width: 576px;
+  height: 88px;
+  background: var(--inputs);
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--gray);
+  border: none;
+}
+
+.bookingFormButton {
+  display: block;
+  border-radius: 12px;
+  padding: 12px 51px;
+  width: 156px;
+  height: 44px;
+  background: var(--button);
+  margin: 0 auto;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--white);
+}

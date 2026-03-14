@@ -16,3 +16,7 @@
   line-height: 125%;
   text-align: center;
 }
+
+.activeLink {
+  color: var(--button-hover);
+}
