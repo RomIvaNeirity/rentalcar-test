@@ -10,3 +10,16 @@ export async function showSuccessToast(message: string) {
     messageColor: "#fff",
   });
 }
+
+export async function showInfoToast(message: string) {
+  const iziToast = (await import("izitoast")).default;
+
+  iziToast.info({
+    title: "No car",
+    message,
+    position: "center",
+    backgroundColor: "#3471ff8a",
+    titleColor: "#fff",
+    messageColor: "#fff",
+  });
+}

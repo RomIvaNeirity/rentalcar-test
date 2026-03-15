@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import css from "./page.module.css";
 
 import { useCarsStore } from "@/lib/store/useCarsStore";
+import { showInfoToast } from "@/lib/Izitoast";
 
 export default function Catalog() {
   const [loading, setLoading] = useState(false);
@@ -28,6 +29,11 @@ export default function Catalog() {
       setLoading(true);
       const res = await getCars(page, filters);
 
+      if (res.cars.length === 0 && page === 1) {
+        // показати тост, якщо нічого не знайдено на першій сторінці
+        showInfoToast("Unfortunately, no cars match your filters.");
+      }
+
       if (page === 1) {
         // при першій сторінці оновлюємо cars і totalCars
         setCars(res.cars, res.totalCars);
@@ -36,6 +42,7 @@ export default function Catalog() {
         addCars(res.cars, res.totalCars);
         console.log(res.cars);
       }
+
       setLoading(false);
     };
 
