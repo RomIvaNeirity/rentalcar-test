@@ -24,15 +24,15 @@ export default function CarList({
           <CarCard key={car.id} item={car} />
         ))}
       </ul>
-
-      {/* NEW — кнопка Load More перенесена сюди */}
+      {loading && <p>Loading...</p>}
       {!loading && cars.length > 0 && cars.length < totalCars && (
         <div className={css.loadMoreButtonContainer}>
           <button
             className={css.loadMoreButton}
             onClick={() => setPage(page + 1)}
+            disabled={loading}
           >
-            Load more
+            {loading ? "Loading..." : "Load more"}
           </button>
         </div>
       )}

@@ -17,7 +17,6 @@ The project demonstrates working with **API requests**, **global state managemen
 - ⚡ Global state management using **Zustand**
 - 🔔 Notifications using **iziToast**
 - 📡 Data fetching from API
-- 🎨 Responsive UI
 
 ---
 
@@ -69,4 +68,4 @@ Pagination instead of Load More
 
 Live demo: https://rentalcar-test.vercel.app/
 
-Developed as part of a learning project by Roman Ivashchenko, Junior Fullstack Developer.
+Developed as part of a test assignment by Roman Ivashchenko, a junior full-stack developer.

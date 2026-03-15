@@ -26,23 +26,22 @@ export default function Catalog() {
   useEffect(() => {
     const fetchCars = async () => {
       setLoading(true);
-      const res = await getCars(page, filters);
+      try {
+        // LOADING
+        const res = await getCars(page, filters);
 
-      if (res.cars.length === 0 && page === 1) {
-        // показати тост, якщо нічого не знайдено на першій сторінці
-        showInfoToast("Unfortunately, no cars match your filters.");
+        if (res.cars.length === 0 && page === 1) {
+          showInfoToast("Unfortunately, no cars match your filters.");
+        }
+
+        if (page === 1) {
+          setCars(res.cars, res.totalCars);
+        } else {
+          addCars(res.cars, res.totalCars);
+        }
+      } finally {
+        setLoading(false);
       }
-
-      if (page === 1) {
-        // при першій сторінці оновлюємо cars і totalCars
-        setCars(res.cars, res.totalCars);
-      } else {
-        // додаємо до існуючих
-        addCars(res.cars, res.totalCars);
-        console.log(res.cars);
-      }
-
-      setLoading(false);
     };
 
     fetchCars();
@@ -52,10 +51,10 @@ export default function Catalog() {
       <Filters brands={brands} />
       <CarList
         cars={cars}
-        loading={loading} // NEW
-        totalCars={totalCars} // NEW
-        page={page} // NEW
-        setPage={setPage} // NEW>
+        loading={loading}
+        totalCars={totalCars}
+        page={page}
+        setPage={setPage}
       />
     </>
   );

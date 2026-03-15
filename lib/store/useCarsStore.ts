@@ -15,7 +15,6 @@ type CarsStore = {
   filters: Filters;
   favorites: string[];
 
-  // змінили сигнатури:
   setCars: (cars: Car[], totalCars: number) => void;
   addCars: (cars: Car[], totalCars: number) => void;
 
