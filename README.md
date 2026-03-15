@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚗 Rental Car Catalog
 
-## Getting Started
+A modern car rental catalog built with **Next.js**, where users can browse available cars, filter them by parameters, and load more results dynamically.
 
-First, run the development server:
+The project demonstrates working with **API requests**, **global state management**, **filters**, and **pagination**.
+
+---
+
+## ✨ Features
+
+- 🔍 Filter cars by:
+  - Brand
+  - Price
+  - Mileage
+- 🚗 Car catalog with cards
+- 📄 Dynamic loading with **Load More**
+- ⚡ Global state management using **Zustand**
+- 🔔 Notifications using **iziToast**
+- 📡 Data fetching from API
+- 🎨 Responsive UI
+
+---
+
+## 🛠 Tech Stack
+
+- **Next.js**
+- **React**
+- **TypeScript**
+- **Zustand** — global state management
+- **React Select** — select inputs
+- **iziToast** — notifications
+- **CSS Modules**
+
+---
+
+## ⚙️ Installation
+
+Clone the repository:
 
 ```bash
+git clone https://github.com/your-username/car-rental-catalog.git
+
+Go to project folder:
+
+cd car-rental-catalog
+
+Install dependencies:
+
+npm install
+
+Run development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+Open in browser:
+
+http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🚀 Future Improvements
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Favorites functionality
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Car details page
 
-## Learn More
+Server-side filtering
 
-To learn more about Next.js, take a look at the following resources:
+Pagination instead of Load More
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Live demo: https://rentalcar-test.vercel.app/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Developed as part of a learning project by Roman Ivashchenko, Junior Fullstack Developer.

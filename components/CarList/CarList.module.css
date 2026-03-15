@@ -1,5 +1,5 @@
 .sectionCarList {
-  padding: 0 120px;
+  padding: 0 120px 124px;
 }
 
 .carList {
@@ -8,4 +8,30 @@
   flex-wrap: wrap;
   row-gap: 48px;
   column-gap: 32px;
+}
+
+.loadMoreButtonContainer {
+  margin: 0 auto;
+  margin-top: 80px;
+
+  text-align: center;
+}
+
+.loadMoreButton {
+  border: 1px solid var(--button);
+  border-radius: 12px;
+  padding: 12px;
+  width: 156px;
+  height: 44px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--main);
+  text-align: center;
+}
+
+.loadMoreButton:hover {
+  border: 1px solid var(--button-hover);
+  cursor: pointer;
 }
