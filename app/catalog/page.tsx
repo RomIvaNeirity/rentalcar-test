@@ -31,7 +31,9 @@ export default function Catalog() {
         const res = await getCars(page, filters);
 
         if (res.cars.length === 0 && page === 1) {
-          showInfoToast("Unfortunately, no cars match your filters.");
+          showInfoToast(
+            "Unfortunately, no cars match your filters. You can reset it",
+          );
         }
 
         if (page === 1) {

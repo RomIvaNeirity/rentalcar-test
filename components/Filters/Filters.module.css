@@ -1,8 +1,9 @@
 .filtersWrapper {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   padding: 84px 258px;
+  justify-content: center;
 }
 
 .filtersForm {
@@ -96,5 +97,32 @@
 }
 
 .filtersResetButton {
-  display: none;
+  display: block;
+  border: 1px solid var(--button);
+  border-radius: 12px;
+  padding: 12px;
+  width: 156px;
+  height: 44px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--main);
+  margin: 0 auto;
+  text-align: center;
+  cursor: pointer;
+}
+
+.filtersResetButton:hover {
+  border: 1px solid var(--button-hover);
+  color: rgb(99, 29, 29);
+}
+
+@media screen and (min-width: 1440px) {
+  .filtersWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 84px 258px;
+  }
 }

@@ -17,7 +17,7 @@ export async function showInfoToast(message: string) {
   iziToast.info({
     title: "No car",
     message,
-    position: "center",
+    position: "topCenter",
     backgroundColor: "#3471ff8a",
     titleColor: "#fff",
     messageColor: "#fff",
